@@ -1,0 +1,89 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active {
+    color: #0077ff;
+    font-weight: 500;
+    border-bottom: 2px solid #0077ff;
+    padding-bottom: 2px;
+}
+
+.navbar-cta .cta-button-minimal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 2px solid;
+    border-radius: 8px;
+    color: transparent;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #ff6a00, #ee0979);
+    background-clip: text;
+    -webkit-background-clip: text;
+    border-image: linear-gradient(90deg, #ff6a00, #ee0979) 1;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button-minimal:hover {
+    background-color: rgba(255, 106, 0, 0.05);
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(255, 106, 0, 0.2);
+}
+
+.cta-icon {
+    font-size: 1.1rem;
+    color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .navbar-cta {
+        align-self: center;
+        width: 100%;
+    }
+
+    .cta-button-minimal {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+}
